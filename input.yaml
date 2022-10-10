@@ -1,31 +1,3 @@
-resource_group: default
-ibm_region: us_south
-classic_access: false
-enable_public_gateway: true
-default_sg_allow_inbound_traffic: false
-generation: 1
-unique_id: asset_multizone
-acl_rules: |
-    [
-      {
-        name        = "egress"
-        action      = "allow"
-        source      = "0.0.0.0/0"
-        destination = "0.0.0.0/0"
-        direction   = "inbound"
-      },
-      {
-        name        = "ingress"
-        action      = "allow"
-        source      = "0.0.0.0/0"
-        destination = "0.0.0.0/0"
-        direction   = "outbound"
-      }
-    ]
-cidr_blocks: |
-    [
-    "10.10.10.0/24",
-    "10.10.20.0/24",
-    "10.10.30.0/24"
-    ] 
+
+
 
