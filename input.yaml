@@ -1,5 +1,5 @@
 resource_group: default
-region: us_south
+ibm_region: us_south
 acl_rules: |
     [
       {
