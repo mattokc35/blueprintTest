@@ -2,8 +2,8 @@ resource_group: default
 ibm_region: us_south
 classic_access: false
 enable_public_gateway: true
-default_sg_allow_inbound_traffic: true
-generation: 2
+default_sg_allow_inbound_traffic: false
+generation: 1
 unique_id: asset_multizone
 acl_rules: |
     [
