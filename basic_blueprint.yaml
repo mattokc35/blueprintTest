@@ -1,4 +1,4 @@
-name: Blueprint_Basic
+name: Blueprint_Basi
 type: blueprint
 schema_version: "1.0.0"
 description: "Simple three module blueprint. Deploys VPC, public gateway, and VSI"
