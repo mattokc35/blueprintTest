@@ -41,13 +41,13 @@ modules:
       - name: resource_group
         value: $blueprint.resource_group
       - name: generation
-        value: 2
+        value: 1
       - name: classic_access
         value: false
       - name: enable_public_gateway
         value: true
       - name: default_sg_allow_inbound_traffic
-        value: true
+        value: false
       - name: acl_rules
         value: $blueprint.acl_rules
         type: |
