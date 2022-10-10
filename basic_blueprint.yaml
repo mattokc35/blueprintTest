@@ -60,7 +60,7 @@ modules:
           })
       - name: cidr_blocks
         value: $blueprint.cidr_blocks
-        type: list(string)
+        type: list(any)
     outputs:
       - name: vpc_id
       - name: subnet_ids
