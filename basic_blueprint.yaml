@@ -1,7 +1,7 @@
 name: "Blueprint Basic Example"
 schema_version: "1.0.0"
 description: "Simple three module blueprint. Deploys VPC, public gateway, and VSI"
-type: "blueprint"
+type: blueprint
 inputs:
   - name: ibmcloud_api_key
   - name: unique_id
