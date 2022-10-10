@@ -1,0 +1,67 @@
+name: "Blueprint Basic Example"
+schema_version: "1.0.0"
+description: "Simple three module blueprint. Deploys VPC, public gateway, and VSI"
+type: "blueprint"
+inputs:
+  - name: ibmcloud_api_key
+  - name: unique_id
+  - name: ibm_region 
+  - name: resource_group
+  - name: generation
+  - name: classic-access
+  - name: enable_public_gateway 
+  - name: default_sg_allow_inbound_traffic
+  - name: acl_rules
+  - name: cidr_blocks
+outputs:
+  - name: vpc_id
+    value: $module.multizone-vpc.outputs.vpc_id
+  - name: subnet_ids
+  value: $module.multizone-vpc.outputs.subnet_ids
+  - name: acl_id
+  value: $module.multizone-vpc.outputs.acl_id
+settings:
+  - name: TF_VERSION
+    value: 1.0
+modules:
+  - name: multizone-vpc
+    module_type: terraform
+    source:
+      source_type: github
+      git:
+        git_repo_url: "https://github.com/Cloud-Schematics/multizone-vpc"
+        git_branch: main
+    inputs:
+      - name: ibmcloud_api_key
+        value: $blueprint.ibmcloud_api_key
+      - name: unique_id
+        value: asset-multizone
+      - name: ibm_region 
+        value: $blueprint.ibm_region
+      - name: resource_group
+        value: $blueprint.resource_group
+      - name: generation
+        value: 2
+      - name: classic_access
+        value: false
+      - name: enable_public_gateway
+        value: true
+      - name: default_sg_allow_inbound_traffic
+        value: true
+      - name: acl_rules
+        value: $blueprint.acl_rules
+        type: |
+          list(object({
+            name = string
+            action = string
+            source = string
+            destination = string
+            direction = string
+          })
+      - name: cidr_blocks
+        value: $blueprint.cidr_blocks
+        type: list(string)
+    outputs:
+      - name: vpc_id
+      - name: subnet_ids
+      - name: acl_id
