@@ -24,7 +24,7 @@ settings:
   - name: TF_VERSION
     value: 1.0
 modules:
-  - name: multizone-vpc
+  - name: vpc
     module_type: terraform
     source:
       source_type: github
