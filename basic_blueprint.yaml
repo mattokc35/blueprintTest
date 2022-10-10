@@ -8,7 +8,7 @@ inputs:
   - name: ibm_region 
   - name: resource_group
   - name: generation
-  - name: classic-access
+  - name: classic_access
   - name: enable_public_gateway 
   - name: default_sg_allow_inbound_traffic
   - name: acl_rules
