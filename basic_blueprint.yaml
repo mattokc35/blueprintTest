@@ -15,11 +15,11 @@ inputs:
   - name: cidr_blocks
 outputs:
   - name: vpc_id
-    value: $module.multizone-vpc.outputs.vpc_id
+    value: $module.vpc.outputs.vpc_id
   - name: subnet_ids
-    value: $module.multizone-vpc.outputs.subnet_ids
+    value: $module.vpc.outputs.subnet_ids
   - name: acl_id
-    value: $module.multizone-vpc.outputs.acl_id
+    value: $module.vpc.outputs.acl_id
 settings:
   - name: TF_VERSION
     value: 1.0
