@@ -10,7 +10,7 @@ settings:
   - name: TF_VERSION
     value: 1.0
 modules:
-  - name: vpc_with_subnets
+  - name: vpc_with_subnets_test
     module_type: terraform
     source:
       source_type: github
