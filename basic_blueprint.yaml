@@ -1,6 +1,6 @@
-name: Blueprint_Basic_1
-type: blueprint
-schema_version: 1.0.0
+name: "Blueprint_Basic_1"
+type: "blueprint"
+schema_version: "1.0.0"
 description: "Simple three module blueprint. Deploys VPC, public gateway, and VSI"
 inputs:
   - name: ibmcloud_api_key
