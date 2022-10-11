@@ -4,7 +4,7 @@ schema_version: "1.0.0"
 description: "Simple three module blueprint. Deploys VPC, public gateway, and VSI"
 inputs:
   - name: ibmcloud_api_key
-outputs:
+  - name: ibm_region
 settings:
   - name: TF_VERSION
     value: 1.0
@@ -19,4 +19,6 @@ modules:
     inputs:
       - name: ibmcloud_api_key
         value: $blueprint.ibmcloud_api_key
-    outputs:
+      - name: ibm_region
+        value: $blueprint.ibm_region
+ 
