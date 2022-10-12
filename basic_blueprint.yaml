@@ -25,7 +25,6 @@ modules:
       - name: vpc_name
         value: $blueprint.vpc_name
     outputs:
-      - name: ibmcloud_api_key
       - name: subnet
       - name: vpc
   - name: vsi_module
@@ -36,7 +35,7 @@ modules:
         git_repo_url: "https://github.com/mattokc35/ibmcloud-tf-vsi-module/tree/main"
     inputs:
       - name: ibmcloud_api_key
-        value: $module.vpc_with_subnets_test.outputs.ibmcloud_api_key
+        value: $blueprint.ibmcloud_api_key
       - name: subnet
         value: $module.vpc_with_subnets_test.outputs.subnet
       - name: vpc

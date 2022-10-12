@@ -1,8 +1,8 @@
 ibm_region : us-south
-ssh_key_name: mattokc35key1
+ssh_key_name: mattokc35key2
 ssh_key_public_key: AAAAB3NzaC1yc2EAAAADAQABAAABAQCDvqTgQGAqDRsjHIyzBN8lI0uK6bnEdODmUnGFfvnsOYu4GpJJl/BiklwsGOyrwZnIAO25a+oGQ36EgYZ9Kl4T3KI0nceZDwAQ2wOWeQpEwjz44TrFFUpSlBH4xWP8RiLp42fXTdeMY+YO+z2z1zFUxD5p0lxDFwrb3/odBCg/Cdeh7MYMb5c5RdHV3ck9yOwgIewKwOWMvKIyL5/NWZ/IwYLRXy69o0ftpYwZRX4dPE+fPxUnemKISR1zMfZ4bh6IfftZySEVkXrb4C1PNoY8aq7x26bNIm48whLK+BsF05gYpADoBjm7NMWMKJqbrN25s5fQ+ylRSJq9tAq5Oqtt 
 vsi_image_id: r006-915d9d19-b033-4055-9ec3-e5170f861c13
 vsi_profile: bx2-2x8
-vsi_name: test-vsi-134562
-vpc_name: mattokc35vpctest123
+vsi_name: test-vsi-1345643
+vpc_name: mattokc35vpctest234
 
