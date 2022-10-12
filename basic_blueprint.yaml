@@ -52,3 +52,4 @@ modules:
         value: $blueprint.ssh_key_name
       - name: ssh_key_public_key
         value: $blueprint.ssh_key_public_key
+    outputs: 
