@@ -4,4 +4,5 @@ ssh_key_public_key: AAAAB3NzaC1yc2EAAAADAQABAAABAQCDvqTgQGAqDRsjHIyzBN8lI0uK6bnE
 vsi_image_id: r006-915d9d19-b033-4055-9ec3-e5170f861c13
 vsi_profile: bx2-2x8
 vsi_name: test-vsi-134562
+vpc_name: mattokc35vpctest123
 

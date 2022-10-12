@@ -5,6 +5,7 @@ description: "Simple three module blueprint. Deploys VPC, public gateway, and VS
 inputs:
   - name: ibmcloud_api_key
   - name: ibm_region
+  - name: vpc_name
 outputs:
 settings:
   - name: TF_VERSION
@@ -21,6 +22,8 @@ modules:
         value: $blueprint.ibmcloud_api_key
       - name: ibm_region
         value: $blueprint.ibm_region
+      - name: vpc_name
+        value: $blueprint.vpc_name
     outputs:
       - name: ibmcloud_api_key
       - name: subnet
