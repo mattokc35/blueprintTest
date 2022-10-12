@@ -36,6 +36,8 @@ modules:
     inputs:
       - name: ibmcloud_api_key
         value: $blueprint.ibmcloud_api_key
+      - name: ibm_region
+        value: $blueprint.ibm_region
       - name: subnet
         value: $module.vpc_with_subnets_test.outputs.subnet
       - name: vpc
