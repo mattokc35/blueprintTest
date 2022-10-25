@@ -53,3 +53,28 @@ modules:
       - name: ssh_key_public_key
         value: $blueprint.ssh_key_public_key
     outputs: 
+  - name: vpc_cluster_module
+    module_type: terraform
+    source:
+      source_type: github
+      git: 
+        git_repo_url: "https://github.com/mattokc35/ibmcloudClusterModule/tree/main"
+      inputs:
+        - name: ibmcloud_api_key
+          value: $blueprint.ibmcloud_api_key
+        - name: ibm_region
+          value: $blueprint.ibm_region
+        - name: resource_group_id
+          value: $blueprint.resource_group_id
+        - name: vpc_id
+          value: $module.vpc_with_subnets_test.outputs.vpc
+        - name: subnet_id
+          value: $module.vpc_with_subnets_test.outputs.subnet
+        - name: worker_count
+          value: $blueprint.worker_count
+        - name: cluster_name
+          value: $blueprint.cluster_name
+        - name: kube_version
+          value: $blueprint.kube_version
+        - name: flavor
+          value: $blueprint.flavor

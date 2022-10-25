@@ -5,4 +5,9 @@ vsi_image_id: r006-d9bd5a28-ded5-4b83-a080-77a86e29a4b5
 vsi_profile: bx2d-16x64
 vsi_name: test-vsi-1234578
 vpc_name: mattokc35testblueprints3
+resource_group_id: 271bbee55baf463e81cec7de47d4b219
+cluster_name: mattokc35-us-south-cluster-2
+worker_count: 3
+kube_version: 1.23.12
+flavor: bx2.2x8
 
