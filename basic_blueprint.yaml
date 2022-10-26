@@ -78,3 +78,28 @@ modules:
           value: $blueprint.kube_version
         - name: flavor
           value: $blueprint.flavor
+      outputs: 
+        - name: cluster_name
+  - name: portworx_vpc_module
+    module_type: terraform
+    source:
+      source_type: github
+      git: 
+        git_repo_url: "https://github.com/mattokc35/portworx-vpc/tree/main"
+      inputs:
+        - name: ibmcloud_api_key
+          value: $blueprint.ibmcloud_api_key
+        - name: region
+          value: $blueprint.ibm_region
+        - name: resource_group
+          value: $blueprint.resource_group
+        - name: cluster_name
+          value: $module.vpc_cluster_module.outputs.cluster_name
+        - name: portworx_service_name
+          value: $blueprint.portworx_service_name
+        - name: cluster_name
+          value: $blueprint.cluster_name
+      outputs:
+        - name: cluster_config_path
+        
+        
